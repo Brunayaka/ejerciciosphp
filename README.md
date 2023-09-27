@@ -22,3 +22,4 @@
 - html5
 - etiquetas sin <>
 - anidar y multiplicar etiquetas
+- Ctrl+Mayus+7 ---->> Comentar varias lineas a la vez
