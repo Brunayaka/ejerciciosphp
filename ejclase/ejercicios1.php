@@ -126,15 +126,15 @@
 
         $paises = [
             "España" => array("Moneda" => "Euros","numHab" => 57),
-            "Francia" => array("Euro",67.75),
-            "Reino Unido" => array("Libra",67.33),
-            "Rusia" => array("Rublo",143.4)
+            "Francia" => array("Moneda" => "Franco","numHab" => 67),
+            "Reino Unido" => array("Moneda" => "Libra","numHab" => 47),
+            "Rusia" => array("Moneda" => "Rublo","numHab" => 147)
         ];
 
         foreach($paises as $claves => $valores){
-            echo "<br>Pais". $claves;
+            echo "<br>Pais ". $claves;
             echo " con moneda " . $valores["Moneda"];
-            echo " con moneda " . $valores["numHab"];
+            echo " con numHab " . $valores["numHab"];
         }
 
 
