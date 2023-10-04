@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+</head>
+
+<body>
+    <h1>Encuesta Usuario</h1>
+    <form name="fencuesta" action="encuesta.php" method="post">
+        <h3>Lenguaje de Programación - RadioButton</h3>
+        <input type="radio" name="lprog" value="css" id="icss">
+        <label for="icss">Lenguaje CSS</label>
+        <input type="radio" name="lprog" value="html" id="ihtml">
+        <label for="ihtml">Lenguaje HTML</label>
+        <input type="radio" name="lprog" value="php" id="iphp" checked>
+        <label for="iphp">Lenguaje PHP</label>
+
+        <h3>Medio de transporte - CheckBox</h3>
+
+        <input type="checkbox" name="ntrans[]" id="ibus" value="Autobus">
+        <label for="ibus">Autobus</label>
+        <input type="checkbox" name="ntrans[]" id="itranvia" value="Tranvia">
+        <label for="itranvia">Tranvia</label>
+        <input type="checkbox" name="ntrans[]" id="icoche" value="Coche">
+        <label for="icoche">Coche</label>
+        
+        <h3>Equipo de Futbol - Select Simple</h3>
+        <select name="sfutbol" id="ifutbol">
+            <option value="Real Zaragoza">Real Zaragoza</option>
+            <option value="Sporting de Gijon">Sporting de Gijon</option>
+            <option value="Huesca">Huesca</option>
+            <option value="AC Milan">AC Milan</option>
+        </select>
+        
+        
+        <br><br>
+        <input type="submit" name="ienviar" value="Enviar encuesta">
+    </form>
+</body>
+
+</html>
