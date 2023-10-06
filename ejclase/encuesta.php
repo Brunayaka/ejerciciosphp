@@ -23,4 +23,11 @@ if (isset($_POST["ienviar"]) && !empty($_POST["ienviar"])) {
         $efutbol = $_POST["sfutbol"];
         echo "<h2>Tu equipo preferido es: $efutbol</h2>";
     }
+    //lista multiple de menu
+    if (isset($_POST["smenu"]) && !empty($_POST["smenu"])) {
+        $menus = $_POST["smenu"];
+        foreach ($menus as $plato) {
+            echo "<br>Plato preferido : " . $plato;
+        }
+    }
 }

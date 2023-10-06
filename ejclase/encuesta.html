@@ -26,7 +26,7 @@
         <label for="itranvia">Tranvia</label>
         <input type="checkbox" name="ntrans[]" id="icoche" value="Coche">
         <label for="icoche">Coche</label>
-        
+
         <h3>Equipo de Futbol - Select Simple</h3>
         <select name="sfutbol" id="ifutbol">
             <option value="Real Zaragoza">Real Zaragoza</option>
@@ -34,11 +34,33 @@
             <option value="Huesca">Huesca</option>
             <option value="AC Milan">AC Milan</option>
         </select>
-        
-        
+
+        <h3>Menu favorito - Lista seleccion multiple</h3>
+        <select name="smenu[]" multiple required sixe="7">
+            <option value="Codillo">Codillo</option>
+            <option value="Lasaña">Lasaña</option>
+            <option value="Fabada">Fabada</option>
+            <option value="Cachopo">Cahopo</option>
+        </select>
+
         <br><br>
         <input type="submit" name="ienviar" value="Enviar encuesta">
+
     </form>
+    <div>
+        <br><br>
+        <form action="showfile.php" method="post" enctype="multipart/form-data">
+            <label for="ifile">Selecciona un fichero a subir</label>
+            <br>
+            <input type="file" name="myfile" id="ifile">
+            <br>
+            <br>
+            <label for="ifichero">Click aqui para subir fichero</label>
+            <br>
+            <input type="submit" name="sfichero" value="Subir fichero" id="ifichero">
+        </form>
+    </div>
+
 </body>
 
 </html>
