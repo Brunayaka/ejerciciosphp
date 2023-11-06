@@ -10,11 +10,11 @@
 <body>
     <h1>Vamos a ver el contenido de mi sesion</h1>
 
-   <!-- <pre>
+   <pre>
         <?php
         var_dump($_SESSION);
         ?>
-    </pre>-->
+    </pre>
     <h2>Informacion de la sesion</h2>
     <h3>Ultimo deseo</h3>
     <p>
@@ -28,20 +28,20 @@
     </p>
 
     <h3>Lista de todos los deseos</h3>
-    <ul>
+    <!-- <ul>
     <?php
-        foreach($_SESSION['deseos'] as $deseo) {
+        foreach($_SESSION['deseo'] as $deseo) {
     ?>
     <li><?php echo "$deseo "?></li>
     <?php
     }
     ?>
-    </ul>
+    </ul> -->
 
     <ul>
 
     <?php
-        foreach ($_SESSION['deseos'] as $i => $deseo) {
+        foreach ($_SESSION['deseo'] as $i => $deseo) {
     ?>
     <li>
         <?php echo "$i: $deseo"?>
@@ -63,9 +63,6 @@
         <li><a href="index.php">Inicio</a></li>
         <li><a href="index.php?method=index">Inicio tambien</a></li>
 
-        <li><a href="index.php?method=fibonacci">Fibonnaci</a></li>
-        <li><a href="index.php?method=potencias2">Potencias2</a></li>
-        <li><a href="index.php?method=factoriales">factorial</a></li>
         <li><a href="index.php?method=versesion">Ver contenido de la sesion</a></li>
     </ul>
 </body>

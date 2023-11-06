@@ -75,21 +75,27 @@ class App
 
     function guardarsesion(){
         session_start();
-        $_SESSION['deseo']=$_POST['deseo'];
-        if(isset($_SESSION['deseos'])){
-            $deseos = $_SESSION['deseos'];
-        }
-        else{
-            $deseos = array();
-        }
-        $deseos[] = $_POST['deseo']; // añadir al final del array
-        $_SESSION['deseos'] = $deseos;
+        $item = $_POST["deseo"];
+        $_SESSION["deseo"][] = $item;
+        
+
+
+
+        // $_SESSION['deseo']=$_POST['deseo'];
+        // if(isset($_SESSION['deseos'])){
+        //     $deseos = $_SESSION['deseos'];
+        // }
+        // else{
+        //     $deseos = array();
+        // }
+        // $deseos[] = $_POST['deseo']; // añadir al final del array
+        // $_SESSION['deseos'] = $deseos;
         header('Location: /app/index.php?method=versesion');
         // echo "Ya esta guardado";
     }
     function borrarsesion(){
         session_start();
-        $datos = json_encode($_SESSION['deseos']);
+        $datos = json_encode($_SESSION['deseo']);
         setcookie(session_name(),$datos,time()-720000); // caduco la cookie asociada a la sesion
         unset($_SESSION); // elimina los datos asociados a la sesion
         session_destroy(); // elimina toda la informacion de sesion del servidor

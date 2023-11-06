@@ -27,5 +27,5 @@
         fwrite($fp,"Cadena escrita en " . time() . PHP_EOL);
     }
 
-    fclose($fp);
+    fclose($fp  );
 
